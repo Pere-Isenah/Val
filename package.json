@@ -38,5 +38,8 @@
   },
   "optionalDependencies": {
     "eruba-webpack-plugin": "*"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }
