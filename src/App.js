@@ -9,14 +9,14 @@ import Cat5 from './img/cat-5.gif';
 import YesCat from './img/cat-yes.gif';
 import emailjs from 'emailjs-com';
 
-const serviceId = process.env.REACT_APP_SERVICE_ID;
-  const templateID = process.env.REACT_APP_TEMPLATE_ID;
-  const publicKey = process.env.REACT_APP_PUBLIC_KEY;
-  const gfName = process.env.REACT_APP_NAME;
+
 const MAX_IMAGES = 5;
 
 const App = () => {
-  
+  const serviceId = process.env.REACT_APP_SERVICE_ID;
+  const templateID = process.env.REACT_APP_TEMPLATE_ID;
+  const publicKey = process.env.REACT_APP_PUBLIC_KEY;
+  const gfName = process.env.REACT_APP_NAME; 
   const [play, setPlay] = useState(true);
   const [noCount, setNoCount] = useState(0);
   // const [yesCount, setYesCount] = useState(0);
@@ -97,11 +97,11 @@ const hideNoButton = () => {
   
   const sendEmail = () => {
     emailjs
-      .send({serviceId},{templateID}, {
+      .send(serviceId,templateID, {
         yesCount,
         noCount,
         // other variables you might need in your template
-      }, {publicKey})
+      }, publicKey)
       .then((response) => {
         console.log('Email sent:', response);
       })
