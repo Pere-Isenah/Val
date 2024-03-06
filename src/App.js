@@ -112,7 +112,7 @@ const hideNoButton = () => {
 
   return (
     <main className="container">
-      <img className="cat-img" src={catImage} alt="Picture of a cat" />
+      <img className="cat-img" src={catImage} />
       <p className="title">{title}</p>
       <div>
         <button type="button" className="btn btn--yes" onClick={handleYesClick} ref={yesButtonRef}>
